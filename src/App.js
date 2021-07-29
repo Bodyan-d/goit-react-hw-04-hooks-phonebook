@@ -70,8 +70,20 @@ function App() {
       contact => e.target.id === contact.id,
     );
 
-    setContacts(p => p.splice(elemIndexToDelete, 1));
+    return setContacts(prev => prev.splice(elemIndexToDelete, 1));
   };
+
+  // deleteItem = e => {
+  //   const elemIndexToDelete = this.state.contacts.findIndex(
+  //     contact => e.target.id === contact.id,
+  //   );
+  //   return this.setState(prevState => {
+  //     console.log(elemIndexToDelete);
+  //     prevState.contacts.splice(elemIndexToDelete, 1);
+
+  //     return { prevState };
+  //   });
+  // };
 
   return (
     <div className="container">
