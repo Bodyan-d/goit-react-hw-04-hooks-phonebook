@@ -46,8 +46,7 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    setContacts(prev => {
-      console.log(prev);
+    setContacts(() => {
       if (contacts.some(contact => contact.name.includes(name))) {
         alert(`${name} is already in contacts`);
         return;
@@ -58,8 +57,6 @@ function App() {
   };
 
   const handleFilter = () => {
-    console.log(contacts);
-
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase()),
     );
@@ -69,7 +66,8 @@ function App() {
     const elemIndexToDelete = contacts.findIndex(
       contact => e.target.id === contact.id,
     );
-    setContacts(contacts.splice(elemIndexToDelete, 1));
+
+    setContacts(p => p.splice(elemIndexToDelete, 1));
   };
 
   return (
