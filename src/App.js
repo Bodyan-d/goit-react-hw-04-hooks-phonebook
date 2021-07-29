@@ -54,6 +54,9 @@ function App() {
 
       return [...contacts, { id: uuidv4(), name, number }];
     });
+
+    setName('');
+    setNumber('');
   };
 
   const handleFilter = () => {
