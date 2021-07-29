@@ -1,0 +1,9 @@
+.filter-title {
+  margin-bottom: 10px;
+}
+
+.search {
+  padding: 5px;
+  outline: none;
+  border: 1px solid blueviolet;
+}

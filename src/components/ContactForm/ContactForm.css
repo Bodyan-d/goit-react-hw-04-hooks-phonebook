@@ -1,0 +1,30 @@
+.phonebook-form {
+  width: 300px;
+  padding: 20px;
+  border: 1.5px solid blue;
+}
+
+.phonebook-form:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.phonebook-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.phonebook-label:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.phonebook-input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid blueviolet;
+}
+
+.submt-form {
+  padding: 5px 10px;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+}
