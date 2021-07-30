@@ -66,11 +66,10 @@ function App() {
   };
 
   const deleteItem = e => {
-    const elemIndexToDelete = contacts.findIndex(
-      contact => e.target.id === contact.id,
-    );
+    const { id } = e.target;
+    const newContacts = contacts.filter(el => el.id !== id);
 
-    return setContacts(prev => prev.splice(elemIndexToDelete, 1));
+    return setContacts(newContacts);
   };
 
   // deleteItem = e => {
